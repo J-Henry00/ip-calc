@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.input-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: .3s;
+}
+
+.input-button:hover {
+    transition: .3s;
+    background-color: #2e6b30;
+}
+
+.input-section {
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    padding: 8px;
+    width: 200px;
+}
+
+.output-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.output-column {
+    flex: 1;
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.output-column h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 1000;
+}
+
+.output-group {
+    margin-bottom: 10px;
+}
+
+.output-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.output-group span {
+    display: block;
+    padding: 5px;
+    background-color: white;
+    border-radius: 3px;
+    word-break: break-all;
+    font-weight: 400;
+}

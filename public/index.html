@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Kalkulátor</title>
+
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+    <script src="/script.js" defer></script>
+
+    <h1 style="text-align: center;">IP Kalkulátor</h1>
+
+    <div class="container">
+        <div class="input-section">
+            <div class="input-group">
+                <label for="ip-address">IP Address:</label>
+                <input required name="ipAddress" type="text" id="ip-address" placeholder="e.g., 192.168.1.1" value="192.168.1.1">
+            </div>
+            <div class="input-group">
+                <label for="subnet-mask">Subnet Mask:</label>
+                <input required name="subnetMask" type="text" id="subnet-mask" placeholder="e.g., 255.255.255.0" value="255.255.255.0">
+            </div>
+            <div class="input-group">
+                <button class="input-button" type="submit" id="calculate">Calculate</button>
+            </div>
+        </div>
+
+        <div class="output-section">
+            <div class="output-column">
+                <h2>Decimal</h2>
+                <div class="output-group">
+                    <label>Network Address:</label>
+                    <span id="network-decimal">-</span>
+                </div>
+                <div class="output-group">
+                    <label>Broadcast Address:</label>
+                    <span id="broadcast-decimal">-</span>
+                </div>
+                <div class="output-group">
+                    <label>First Host:</label>
+                    <span id="first-host-decimal">-</span>
+                </div>
+                <div class="output-group">
+                    <label>Last Host:</label>
+                    <span id="last-host-decimal">-</span>
+                </div>
+                <div class="output-group">
+                    <label>Wildcard Mask:</label>
+                    <span id="wildcard-decimal">-</span>
+                </div>
+                <div class="output-group">
+                    <label>Number of Hosts:</label>
+                    <span id="hosts-decimal">-</span>
+                </div>
+                <div class="output-group">
+                    <label>Subnet Mask Length (CIDR):</label>
+                    <span id="subnet-length">-</span>
+                </div>
+            </div>
+
+            <div class="output-column">
+                <h2>Binary</h2>
+                <div class="output-group">
+                    <label>Network Address:</label>
+                    <span id="network-binary">-</span>
+                </div>
+                <div class="output-group">
+                    <label>Broadcast Address:</label>
+                    <span id="broadcast-binary">-</span>
+                </div>
+                <div class="output-group">
+                    <label>First Host:</label>
+                    <span id="first-host-binary">-</span>
+                </div>
+                <div class="output-group">
+                    <label>Last Host:</label>
+                    <span id="last-host-binary">-</span>
+                </div>
+                <div class="output-group">
+                    <label>Wildcard Mask:</label>
+                    <span id="wildcard-binary">-</span>
+                </div>
+                <div class="output-group">
+                    <label>Number of Hosts:</label>
+                    <span id="hosts-binary">-</span>
+                </div>
+            </div>
+
+            <div class="output-column">
+                <h2>Hexadecimal</h2>
+                <div class="output-group">
+                    <label>Network Address:</label>
+                    <span id="network-hex">-</span>
+                </div>
+                <div class="output-group">
+                    <label>Broadcast Address:</label>
+                    <span id="broadcast-hex">-</span>
+                </div>
+                <div class="output-group">
+                    <label>First Host:</label>
+                    <span id="first-host-hex">-</span>
+                </div>
+                <div class="output-group">
+                    <label>Last Host:</label>
+                    <span id="last-host-hex">-</span>
+                </div>
+                <div class="output-group">
+                    <label>Wildcard Mask:</label>
+                    <span id="wildcard-hex">-</span>
+                </div>
+                <div class="output-group">
+                    <label>Number of Hosts:</label>
+                    <span id="hosts-hex">-</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

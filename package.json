@@ -1,0 +1,33 @@
+{
+  "name": "ip-calc",
+  "version": "1.0.0",
+  "description": "Po zadani IP adresy doda udaje",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon . --env dev",
+    "start": "node . --env prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/J-Henry00/ip-calc.git"
+  },
+  "keywords": [
+    "ip",
+    "calc"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/J-Henry00/ip-calc/issues"
+  },
+  "homepage": "https://github.com/J-Henry00/ip-calc#readme",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.1",
+    "ip": "^2.0.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}

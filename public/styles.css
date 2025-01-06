@@ -39,6 +39,7 @@
 .input-group label {
     display: block;
     margin-bottom: 5px;
+    user-select: none;
 }
 
 .input-group input {
@@ -64,6 +65,7 @@
     margin-bottom: 15px;
     text-align: center;
     font-weight: 1000;
+    user-select: none;
 }
 
 .output-group {
@@ -74,6 +76,7 @@
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+    user-select: none;
 }
 
 .output-group span {
@@ -83,4 +86,5 @@
     border-radius: 3px;
     word-break: break-all;
     font-weight: 400;
+    user-select: text;
 }

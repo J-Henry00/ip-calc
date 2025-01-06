@@ -16,6 +16,27 @@ router.post('/getData', (req, res) => {
     try {
         const cidr = ip.subnet(ipAddress, subnetMask);
 
+        function getClass() {
+            const firstOctet = ipAddress.split(".")[0];
+            let result;
+
+            if (firstOctet >= 1 && firstOctet <= 126) {
+                result = "A";
+            } else if (firstOctet >= 128 && firstOctet <= 191) {
+                result = "B";
+            } else if (firstOctet >= 192 && firstOctet <= 223) {
+                result = "C";
+            } else if (firstOctet >= 224 && firstOctet <= 239) {
+                result = "D";
+            } else if (firstOctet >= 240 && firstOctet <= 255) {
+                result = "E";
+            } else {
+                result = "Unknown";
+            }
+
+            return result;
+        }
+
         const decimal = {
             ipAddress,
             subnetMask,
@@ -59,6 +80,8 @@ router.post('/getData', (req, res) => {
         });
 
         return res.json({
+            ipAddress,
+            class: getClass(),
             decimal,
             binary,
             hexadecimal

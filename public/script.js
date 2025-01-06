@@ -2,6 +2,9 @@
 const ipAddress = document.querySelector('input#ip-address');
 const subnetMask = document.querySelector('input#subnet-mask');
 const submitBtn = document.querySelector('button#calculate');
+const ipClass = document.querySelector('span#ip-class');
+const subnetMaskBinary = document.querySelector('span#subnet-mask-binary');
+const subnetMaskHex = document.querySelector('span#subnet-mask-hex');
 
 // decimal outputs
 const networkDecimal = document.querySelector('span#network-decimal');
@@ -41,6 +44,7 @@ function getData() {
         wildcardDecimal.textContent = '-';
         hostsDecimal.textContent = '-';
         subnetLength.textContent = '-';
+        ipClass.textContent = '-';
         
         networkBinary.textContent = '-';
         broadcastBinary.textContent = '-';
@@ -48,6 +52,7 @@ function getData() {
         lastHostBinary.textContent = '-';
         wildcardBinary.textContent = '-';
         hostsBinary.textContent = '-';
+        subnetMaskBinary.textContent = '-';
 
         networkHex.textContent = '-';
         broadcastHex.textContent = '-';
@@ -55,6 +60,7 @@ function getData() {
         lastHostHex.textContent = '-';
         wildcardHex.textContent = '-';
         hostsHex.textContent = '-';
+        subnetMaskHex.textContent = '-';
         alert('Je potreba zadat IP adresu a Subnet Mask');
         return;
     }
@@ -77,6 +83,9 @@ function getData() {
             return;
         }
 
+        // IP Class output
+        ipClass.textContent = data.class;
+
         // Decimal outputs
         networkDecimal.textContent = data.decimal.networkAddress;
         broadcastDecimal.textContent = data.decimal.broadcasAddress;
@@ -93,6 +102,7 @@ function getData() {
         lastHostBinary.textContent = data.binary.lastHost;
         wildcardBinary.textContent = data.binary.wildcardMask;
         hostsBinary.textContent = data.binary.numHosts;
+        subnetMaskBinary.textContent = data.binary.subnetMask;
 
         // Hexadecimal outputs
         networkHex.textContent = data.hexadecimal.networkAddress;
@@ -101,6 +111,7 @@ function getData() {
         lastHostHex.textContent = data.hexadecimal.lastHost;
         wildcardHex.textContent = data.hexadecimal.wildcardMask;
         hostsHex.textContent = data.hexadecimal.numHosts;
+        subnetMaskHex.textContent = data.hexadecimal.subnetMask;
     })
     .catch(error => {
         console.error('Error:', error);

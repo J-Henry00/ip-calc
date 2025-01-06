@@ -6,12 +6,13 @@
     <title>IP Kalkulátor</title>
 
     <link rel="stylesheet" href="/styles.css">
+    <link rel="shortcut icon" href="https://cdn.glitch.global/8a62376c-9f27-469b-8689-366ad6a87b47/public%2Ffavicon.ico?v=1733598240227">
 </head>
 <body>
 
     <script src="/script.js" defer></script>
 
-    <h1 style="text-align: center;">IP Kalkulátor</h1>
+    <h1 style="text-align: center; user-select: none;">IP Kalkulátor</h1>
 
     <div class="container">
         <div class="input-section">
@@ -31,6 +32,10 @@
         <div class="output-section">
             <div class="output-column">
                 <h2>Decimal</h2>
+                <div class="output-group">
+                    <label>IP Class:</label>
+                    <span id="ip-class">-</span>
+                </div>
                 <div class="output-group">
                     <label>Network Address:</label>
                     <span id="network-decimal">-</span>
@@ -80,6 +85,10 @@
                     <span id="last-host-binary">-</span>
                 </div>
                 <div class="output-group">
+                    <label>Subnet Mask:</label>
+                    <span id="subnet-mask-binary">-</span>
+                </div>
+                <div class="output-group">
                     <label>Wildcard Mask:</label>
                     <span id="wildcard-binary">-</span>
                 </div>
@@ -106,6 +115,10 @@
                 <div class="output-group">
                     <label>Last Host:</label>
                     <span id="last-host-hex">-</span>
+                </div>
+                <div class="output-group">
+                    <label>Subnet Mask:</label>
+                    <span id="subnet-mask-hex">-</span>
                 </div>
                 <div class="output-group">
                     <label>Wildcard Mask:</label>
